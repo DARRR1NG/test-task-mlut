@@ -1,0 +1,60 @@
+/* Не додумалась как написать это свойство с помощью синтаксиса mlut */
+
+.Ta-c {
+    text-align: center;
+}
+
+/* Дизайн-фигуры */
+
+.card-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-container::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 270px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--ml-pinkEl);
+}
+
+.card-container::before {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--ml-purpleEl);
+}
+
+.main-text {
+    position: relative;
+}
+
+.main-text::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 60px;
+    width: 40px;
+    height: 40px;
+    background: var(--ml-purpleEl);
+    clip-path: polygon(70% 10%, 0% 80%, 100% 100%);
+}
+
+.main-text::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    background: var(--ml-pinkEl);
+    clip-path: polygon(20% 10%, 10% 90%, 100% 100%);
+}
